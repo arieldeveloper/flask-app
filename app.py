@@ -1,8 +1,7 @@
 #Ariel Chouminov
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
 
 
 app = Flask(__name__)
@@ -18,9 +17,44 @@ class Todo(db.Model):
         return '<Task %r>' % self.id #every time a task is created it will return the id
 
 #create index route
-@app.route('/')
+@app.route('/', methods=['POST', 'GET']) #We can now send data to database with post
 def index():
-    return render_template('index.html') #knows to look into templates folder to render the html file
+    if request.method == "POST":
+        task_content = request.form["content"] #refers to id in the html templatey
+        new_task = Todo(content=task_content)
+        try:
+            db.session.add(new_task)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "There was an error when adding a task" #error message
+    else:
+        tasks = Todo.query.order_by(Todo.date_created).all() #Shows the entire database by date created
+        return render_template('index.html', tasks=tasks) #knows to look into templates folder to render the html file
+
+@app.route('/delete/<int:id>')
+def delete(id):
+    taskToDelete = Todo.query.get_or_404(id)
+    try:
+        db.session.delete(taskToDelete)
+        db.session.commit()
+        return redirect('/') #refreshes the page
+    except:
+        return "There was an issue deleting your task"
+
+@app.route('/update/<int:id>', methods=['POST', 'GET'])
+def update(id):
+    task = Todo.query.get_or_404(id)
+    if request.method == 'POST':
+        task.content = request.form['content'] #setting the tasks content to the forms value given
+
+        try:
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "There was an issue updating your task"
+    else:
+        return render_template('update.html', task=task)
 
 if __name__=="__main__":
     app.run(debug=True)
