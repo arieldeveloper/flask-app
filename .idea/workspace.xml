@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8698f6fe-21d6-4faa-99ab-6bcf706197d5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bYhuvsubeDHGpXJgL9JqIa08Ue" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8698f6fe-21d6-4faa-99ab-6bcf706197d5" name="Default Changelist" comment="" />
+      <created>1588815161472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588815161472</updated>
+      <workItem from="1588815165133" duration="1149000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1137" y="312" key="FileChooserDialogImpl" timestamp="1588815303691">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1137" y="312" key="FileChooserDialogImpl/0.23.1920.1057@0.23.1920.1057" timestamp="1588815303691" />
+    <state x="858" y="190" key="SettingsEditor" timestamp="1588815445311">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="858" y="190" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1588815445311" />
+  </component>
+</project>
