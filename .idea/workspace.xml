@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8698f6fe-21d6-4faa-99ab-6bcf706197d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="8698f6fe-21d6-4faa-99ab-6bcf706197d5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588815161472</updated>
-      <workItem from="1588815165133" duration="6199000" />
+      <workItem from="1588815165133" duration="6575000" />
     </task>
     <servers />
   </component>
@@ -57,6 +53,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="886" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588865786991">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="886" y="361" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1588865786991" />
     <state x="1137" y="312" key="FileChooserDialogImpl" timestamp="1588815303691">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
