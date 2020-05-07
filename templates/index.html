@@ -7,9 +7,9 @@
 {% block body %}
 <div class="content">
     <h1 style="text-align: center">Task Manager</h1>
+    <!-- If there is no tasks -->
     {% if tasks|length < 1 %}
-    <h3 style ="text-align: center">There are currently now tasks. Create one!</h3>
-
+    <h3 style ="text-align: center">There are currently no tasks. Create one!</h3>
     {% else %}
         <table>
             <tr>
@@ -35,6 +35,9 @@
         <input type="text" name="content" id="content">
         <input type="submit" value="Add a Task">
     </form>
-
 </div>
+
+<h4 style="text-align: center">This database will automatically reset every 24 hours.</h4>
+
+<h5 style="text-align: center">Created by ArielDeveloper </h5>
 {% endblock %}
