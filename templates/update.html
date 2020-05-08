@@ -13,5 +13,10 @@
         <input type="text" name="content" value ="{{task.content }}" id="content">
         <input type="submit" value="Update">
     </form>
+    {% if error %}
+<div class="alert alert-danger" role="alert">
+No Task Entered!
+</div>
+{% endif %}
 </div>
 {% endblock %}

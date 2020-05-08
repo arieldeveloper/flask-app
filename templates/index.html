@@ -4,13 +4,13 @@
 <title>Task Manager</title>
 {% endblock %}
 {% block body %}
-<div class="content">
+<div class="container">
     <h1 style="text-align: center">Task Manager</h1>
     <!-- If there is no tasks -->
     {% if tasks|length < 1 %}
     <h3 style ="text-align: center">There are currently no tasks. Create one!</h3>
     {% else %}
-        <table class="table">
+        <table class="table table-sm table-striped table-hover"">
             <tr>
                 <th>Task</th>
                 <th>Added</th>
@@ -30,14 +30,20 @@
         </table>
     {% endif %}
     <br>
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+    No Task Entered!
+    </div>
+    {% endif %}
+    <div style="text-align: center">
     <form action="/" method="POST">
         <!-- -->
         <input type="text" name="content" id="content">
         <input type="submit" value="Add a Task">
     </form>
+    </div>
 </div>
-
-<h4 style="text-align: center">This database will automatically reset every 24 hours.</h4>
-
-<h5 style="text-align: center">Created by ArielDeveloper </h5>
+<br>
+<h5 style="text-align: center">This database will automatically reset every 24 hours.</h5>
+<h6 style="text-align: center">Created by ArielDeveloper </h6>
 {% endblock %}

@@ -20,7 +20,11 @@ class Todo(db.Model):
 @app.route('/', methods=['POST', 'GET']) #We can now send data to database with post
 def index():
     if request.method == "POST":
-        task_content = request.form["content"] #refers to id in the html templatey
+        task_content = request.form["content"] #refers to id in the html template
+        #If content is empty give an alert
+        if task_content == "":
+            tasks = Todo.query.order_by(Todo.date_created).all()
+            return render_template("index.html", tasks=tasks, error=True)
         new_task = Todo(content=task_content)
         try:
             db.session.add(new_task)
@@ -30,7 +34,7 @@ def index():
             return "There was an error when adding a task" #error message
     else:
         tasks = Todo.query.order_by(Todo.date_created).all() #Shows the entire database by date created
-        return render_template('index.html', tasks=tasks) #knows to look into templates folder to render the html file
+        return render_template('index.html', tasks=tasks, error=False) #knows to look into templates folder to render the html file
 
 @app.route('/delete/<int:id>')
 def delete(id):
@@ -47,14 +51,15 @@ def update(id):
     task = Todo.query.get_or_404(id)
     if request.method == 'POST':
         task.content = request.form['content'] #setting the tasks content to the forms value given
-
+        if task.content == "":
+            return render_template("update.html", task=task, error=True)
         try:
             db.session.commit()
             return redirect('/')
         except:
             return "There was an issue updating your task"
     else:
-        return render_template('update.html', task=task)
+        return render_template('update.html', task=task, error=False)
 
 if __name__=="__main__":
     app.run(debug=True) #debug on for development
