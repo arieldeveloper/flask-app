@@ -5,7 +5,7 @@
 {% endblock %}
 {% block body %}
 <div class="container">
-    <h1 style="text-align: center">Task Manager</h1>
+    <h1 style="text-align: center; font-style: oblique; margin: 2%;">Task Manager</h1>
     <!-- If there is no tasks -->
     {% if tasks|length < 1 %}
     <h3 style ="text-align: center">There are currently no tasks. Create one!</h3>
@@ -38,7 +38,7 @@
     <div style="text-align: center">
     <form action="/" method="POST">
         <!-- -->
-        <input type="text" name="content" id="content">
+        <input type="text" style="width: 50%" name="content" id="content">
         <input type="submit" value="Add a Task">
     </form>
     </div>
