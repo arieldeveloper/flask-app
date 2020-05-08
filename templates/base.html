@@ -1,17 +1,23 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 
     <!-- Link our stylesheet using url_for -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/Bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+
     {% block head %}
+    {% block title %}
     <title></title>
     {% endblock %}
 
+    {% endblock %}
 
 </head>
 <body>
     {% block body %}{% endblock %}
 </body>
 </html>
+{% endblock %}
